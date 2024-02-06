@@ -1,7 +1,9 @@
 
-# Mycroft Bus Client
+# Mycroft Bus Client LTS
 
-This module is a simple interface for the mycroft messagebus and can be used to connect to mycroft, send messages and react to messages sent by the Mycroft system.
+This project provides a long term support version of the Mycroft Bus Client. The original project is stalled and it has a problem with pinning the pyee version, which is a reason for exluding the original module from being used as a dependency in Home Assistant. This project was forked to enable the reimplementation and reactivation of the mycroft notify integration in Home Assistant.
+
+Mycroft Bus Client is a simple interface for the mycroft messagebus and can be used to connect to mycroft, send messages and react to messages sent by the Mycroft system.
 
 
 ## MycroftBusClient()
@@ -28,7 +30,7 @@ as reacting to messages on the bus
 from mycroft_bus_client import MessageBusClient, Message
 
 print('Setting up client to connect to a local mycroft instance')
-client = MessageBusClient()
+client = MessageBusClient(host="0.0.0.0")
 client.run_in_thread()
 
 print('Sending speak message...')
