@@ -1,0 +1,53 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [
+    "mycroft_bus_client",
+    "mycroft_bus_client.client",
+    "mycroft_bus_client.util"
+]
+
+[project]
+name = "mycroft-messagebus-client-lts"
+version = "0.10.2"
+description = "Mycroft Messagebus Client LTS"
+readme = "README.md"
+authors = [
+    { name = "Mycroft AI", email = "devs@mycroft.ai" },
+    { name = "Åke Forslund", email = "ake.forslund@gmail.com" },
+    { name = "Sebastian Mäki", email = "sebastian.maki@gmail.com" }
+]
+license = { file = "LICENSE.md" }
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: Apache Software License',
+
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+keywords = ["bus", "client", "mycroft"]
+dependencies = [
+    "websocket-client >= 0.54.0",
+    "pyee >= 9.0.0",
+]
+requires-python = ">=3.6"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/neatbasis/mycroft-messagebus-client"
+
+#[project.scripts]
+#realpython = "reader.__main__:main"
