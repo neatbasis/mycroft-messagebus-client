@@ -25,7 +25,7 @@ import traceback
 from threading import Event, Thread
 from uuid import uuid4
 
-from pyee import ExecutorEventEmitter
+from pyee.executor import ExecutorEventEmitter
 from websocket import (WebSocketApp,
                        WebSocketConnectionClosedException,
                        WebSocketException)

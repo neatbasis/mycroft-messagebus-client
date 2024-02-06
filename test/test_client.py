@@ -14,7 +14,7 @@
 #
 from unittest.mock import Mock
 
-from pyee import ExecutorEventEmitter
+from pyee.executor import ExecutorEventEmitter
 
 from mycroft_bus_client import MessageBusClient, Message
 from mycroft_bus_client.client import MessageWaiter, MessageCollector
